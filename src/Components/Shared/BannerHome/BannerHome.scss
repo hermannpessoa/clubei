@@ -1,0 +1,21 @@
+.bannerContainer{
+    max-width: 100%;
+    padding: 30px 0;
+    .bannerImage,
+    .bannerMobile{
+        width: 100%;
+        display: none;
+    }
+
+    @media (max-width: 680px){
+        .bannerMobile{
+            display: block;
+        }
+    }
+
+    @media (min-width: 681px){
+        .bannerImage{
+            display: block;
+        }
+    }
+}

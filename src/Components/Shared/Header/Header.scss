@@ -1,0 +1,39 @@
+
+/* Navbar */
+
+.logo{
+    max-width: 190px;
+    display: block;
+}
+header{
+    background-color: #fafafa;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        button{
+            margin: 0;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            &:last-child{
+                nav{
+                    ul{
+                        margin: 0;
+                        display: flex;
+                        li{
+                            list-style: none;
+                            margin: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "planos": [
+        {
+            "id":0,
+            "name":"Mega",
+            "emphasis":  false,
+            "benefits":[
+                { "label": "Direito a 2 clubes" },
+                { "label": "Pagamento com desconto em folha" },
+                { "label": "Cancele quando quiser" }
+            ],
+            "price":{
+                "oldPrice": null,
+                "currentPrice": 89.90
+            }
+        },{
+            "id":1,
+            "name":"Top",
+            "emphasis":  true,
+            "benefits":[
+                { "label": "Direito a 3 clubes" },
+                { "label": "Pagamento com desconto em folha" },
+                { "label": "Cancele quando quiser" }
+            ],
+            "price":{
+                "oldPrice": 169.90,
+                "currentPrice": 129.90
+            }
+        },{
+            "id":2,
+            "name":"Light",
+            "emphasis":  false,
+            "benefits":[
+                { "label": "Direito a 1 clubes" },
+                { "label": "Pagamento com desconto em folha" },
+                { "label": "Cancele quando quiser" }
+            ],
+            "price":{
+                "oldPrice": null,
+                "currentPrice": 49.90
+            }
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+@import '../../../Styles/Main.scss';
+
+.plans{
+    .card{
+        padding: 20px;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        position: relative;
+        .clubinho{
+            $w: 120px;
+            position: absolute;
+            top: -50px;
+            right: 0px;
+            width: $w;
+            height: $w;
+            img{
+                width: 100%;
+            }
+        }
+        &.emphasis{
+            background: $vermelho;
+            color: $branco !important;
+            border-color: $vermelho;
+        }
+        .card-title,
+        .card-cta,
+        .card-prices{
+            margin-top: auto;
+            text-align: center;
+            display: block;
+            width: 100%;
+            button{
+                display: block;
+                width: 100%;
+            }
+        }
+        .card-title{
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+    }
+}
