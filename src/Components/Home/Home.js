@@ -3,7 +3,7 @@ import BannerHome from '../Shared/BannerHome/BannerHome'
 import Footer from '../Shared/Footer/Footer'
 import Header from '../Shared/Header/Header'
 import Planos from '../Planos/Planos'
-import CallToActionSection from '../Shared/call-to-action/callToActionSection'
+import CallToActionSection from '../Shared/callToActionSection/callToActionSection'
 
 function Home() {
     return (
