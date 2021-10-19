@@ -1,10 +1,13 @@
+
 import React, {useState} from 'react'
 import { Container, Button } from 'react-bootstrap'
-import './CallToActionSection.scss'
-import mascote from '../../../Assets/imgs/Verde.png'
+
+import './CallToActionFornecedorSection.scss'
+import mascote from '../../../Assets/imgs/Laranja.png'
 import ModalContato from '../ModalContato/ModalContato'
 
-function CallToActionSection() {
+
+function CallToActionFornecedorSection() {
     const [modalShow, setModalShow] = useState(false);
 
     const handleClick = () => {
@@ -17,18 +20,16 @@ function CallToActionSection() {
             show={modalShow} onHide={() => {
             setModalShow(false);
         }}></ModalContato>
-        <div className="callToActionSection">
+        <div className="callToActionFornecedorSection">
             <Container>
                 <div className="callToActionSection-container">
-                    <div className="mascote"><img src={mascote} alt="Clubinho" /></div>
                     <div className="textToAction">
                         <div className="title">
                             Seu colaborar vai amar esse benefício
                         </div>
-                        <small>Liberdade para seu time escolher  benefícios, e muito mais</small>
-                        <Button variant="primary" onClick={handleClick}>solicitar contato</Button>
-
+                        <Button variant="primary mt-4" onClick={handleClick}>solicitar contato</Button>
                     </div>
+                    <div className="mascote"><img src={mascote} alt="Clubinho" /></div>
                 </div>
             </Container>
         </div>
@@ -36,4 +37,4 @@ function CallToActionSection() {
     )
 }
 
-export default CallToActionSection
+export default CallToActionFornecedorSection

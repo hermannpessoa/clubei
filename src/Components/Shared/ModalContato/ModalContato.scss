@@ -1,0 +1,15 @@
+@import '../../../Styles/Main.scss';
+.modal-clubei{
+    .modal-header{
+        border-bottom: none !important;
+    }
+    .modal-body{
+        padding: 50px 100px;
+    }
+
+    @media (max-width: 800px) {
+        .modal-body{
+            padding: 30px;
+        }
+    }
+}

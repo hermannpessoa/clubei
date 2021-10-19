@@ -1,5 +1,5 @@
 import React, {useState, useEffect}from 'react'
-import { Container } from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
 import './ListaPlanos.scss';
 import Card from '../Cards/Card'
 import useApi from '../../../Services/Main.service'
@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
 import  useWindowDimensions from '../../../Assets/Helpers/WindowDimmensios';
+import { Link } from 'react-router-dom';
 
 const ListaPlanos = () => {
 
@@ -53,7 +54,13 @@ const ListaPlanos = () => {
     return (
         <>
             <Container>
-                <div className="plans">
+                <Row>
+                <div className="col-12">
+                    <Link to="/planos"><h2 className="title">Nossos Planos</h2></Link>
+                </div>
+                </Row>
+                <Row>
+                <div className="plans col-12">
                     <Swiper
                         slidesPerView={slidesPerView()}
                         breackpoints={breakpoints}
@@ -75,6 +82,7 @@ const ListaPlanos = () => {
                     )}
                     </Row> */}
                 </div>
+                </Row>
             </Container>
         </>
     )

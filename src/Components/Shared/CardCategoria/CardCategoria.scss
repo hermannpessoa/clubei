@@ -1,0 +1,43 @@
+@import '../../../Styles/Main.scss';
+
+.colorCard{
+    // background-color: #f1f1f1;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 15px;
+    &.last{
+        display: inline-flex;
+        height: 100%;
+        color: #666;
+        align-items: center;
+        transition: all .15s ease;
+        
+        svg{
+            transition: all .15s ease;
+        }
+        &:hover{
+            cursor: pointer;
+            background-color: $vermelho !important;
+            transform: scale(1.05);
+            color: #FFF !important;
+            svg{
+                margin-left: 10px;
+            }
+        }
+        h2{
+            font-size: 18px;
+            margin: 0;
+        }
+    }
+    .colorCard-image{
+        img{
+            width: 100%;
+        }
+    }
+    .colorCard-name{
+        font-size: 14px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}

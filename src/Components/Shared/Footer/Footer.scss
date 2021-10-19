@@ -1,0 +1,53 @@
+
+@import '../../../Styles/Main.scss';
+
+.footer{
+    padding: 25px;
+    background: $vermelho;
+    min-height: 300px;
+
+    .containerFooter{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .social{
+        color: #FFF;
+        display: inline-flex;
+        width: 100%;
+        justify-content: center;
+        > div {
+            padding: 15px;
+            svg{
+                $s: 35px;
+                width: $s;
+                height: $s;
+            }
+        }
+    }
+    .menuFooter{
+        ul{
+            margin: 25px 0 0;
+            padding: 0;
+            li{
+                list-style: none;
+                text-align: center;
+                a{
+                    display: block;
+                    color: #fff;
+                    transition: all .1 ease;
+                    &:hover{
+                        color: $amarelo;
+                        transform: scale(1.02);
+                    }
+                }
+            }
+        }
+    }
+    .copyrights{
+        color: #fff;
+        margin-top: 35px;
+    }
+}

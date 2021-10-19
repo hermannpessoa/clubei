@@ -1,15 +1,39 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Header.scss';
 
 import Logo from './../../../Assets/imgs/logo-horizontal.png';
 import { Container, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-class Header extends Component {
-    render() {
+import ModalLoginFuncionario from '../ModalLogin/ModalLoginFuncionario'
+
+function Header() {
+        const [modalShow, setModalShow] = useState(false);
+
+        const [user, setUser] = useState(null);
+
+        const getUser = async () => {
+            const usuarioLogado = JSON.parse(localStorage.getItem('user'));
+            setUser(usuarioLogado ? usuarioLogado : null)
+         }
+
+        useEffect(() => {
+            getUser()
+        }, [])
+        
+        const handleShow = () => {
+            setModalShow(!modalShow)
+        }
         return (
             <div>
-                <header>
+                <ModalLoginFuncionario
+                    show={modalShow}
+                    onHide={() => {
+                        getUser();
+                        setModalShow(false);
+                    }}
+                ></ModalLoginFuncionario>
+                <div className="header">
                     <Container className="container">
                         <div>
                             <Link to="/">
@@ -20,7 +44,10 @@ class Header extends Component {
                             <nav>
                                 <ul id="navegacao">
                                     <li id="funcionarios">
-                                        <Button variant="primary">Funcionários</Button>
+                                        <Button variant="primary" onClick={handleShow}>
+                                            {!user && <span>Funcionários</span>}
+                                            {user && <span>{user.nome}</span>}
+                                        </Button>
                                     </li>
                                     <li id="empresas">
                                         <Button variant="primary" className="outline">Empresa</Button>
@@ -29,10 +56,10 @@ class Header extends Component {
                             </nav>
                         </div>
                     </Container>
-                </header>
+                </div>
             </div>
         )
-    }
+    
 }
 
 export default Header

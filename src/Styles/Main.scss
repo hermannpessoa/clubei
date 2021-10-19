@@ -7,7 +7,7 @@ a{
     color: initial;
 }
 body{
-    font-family: Poppins, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Poppins', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 .overflow-x-hidden{
@@ -34,13 +34,25 @@ $theme-colors: (
   "danger":     $vermelho,
   "light":      $cinzaClaro,
   "dark":       $cinza,
-  "superlight": $branco
+  "superlight": $branco,
+  "azulEscuro": $azulEscuro,
+  "azulClaro":  $azulClaro,
+  "verde":      $verde,
+  "laranja":    $laranja,
+  "amarelo":    $amarelo,
+  "vermelho":   $vermelho,
+  "cinzaClaro": $cinzaClaro,
+  "cinza":      $cinza,
+  "branco":     $branco
 ) !default;
 
 @each $color, $value in $theme-colors {
 
     .--text-#{$color}{
         color: $value !important;
+    }
+    .--bg-#{$color}{
+        background-color: $value !important;
     }
 
     .btn-#{$color} {
@@ -71,12 +83,18 @@ $theme-colors: (
 }
 
 .content{
-    margin-top: 70px;
+    margin-top: 89px;
 }
 
 .title{
     font-family: 'Poppins';
-    font-size: 47px;
+    font-size: 35px;
     font-weight: 400;
+}
+
+@media (max-width: 800px){
+    .title{
+        font-size: 28px;
+    }
 }
 

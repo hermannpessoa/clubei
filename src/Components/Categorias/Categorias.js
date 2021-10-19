@@ -1,10 +1,9 @@
 import React from 'react'
 import { Container, Row } from 'react-bootstrap'
 import Header from '../Shared/Header/Header';
-import ListaPlanos from './../Shared/ListaPlanos/ListaPlanos';
 
 
-function Planos() {
+function Categorias() {
     return (
         <>
             <Header></Header>
@@ -12,7 +11,7 @@ function Planos() {
             <Container>
                 <Row>
                     <div className="col-12">
-                        <ListaPlanos></ListaPlanos>
+                        categorias
                     </div>
                 </Row>
             </Container>
@@ -21,4 +20,4 @@ function Planos() {
     )
 }
 
-export default Planos
+export default Categorias

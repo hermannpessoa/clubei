@@ -1,9 +1,11 @@
 import React from 'react'
 import BannerHome from '../Shared/BannerHome/BannerHome'
-import Footer from '../Shared/Footer/Footer'
 import Header from '../Shared/Header/Header'
-import Planos from '../Planos/Planos'
-import CallToActionSection from '../Shared/callToActionSection/callToActionSection'
+import Footer from '../Shared/Footer/Footer'
+import CallToActionSection from '../Shared/CallToActionSection/CallToActionSection'
+import ListaCategorias from '../Shared/ListaCategorias/ListaCategorias'
+import CallToActionFornecedorSection from '../Shared/CallToActionFornecedorSection/CallToActionFornecedorSection'
+import ListaPlanos from '../Shared/ListaPlanos/ListaPlanos'
 
 function Home() {
     return (
@@ -11,8 +13,10 @@ function Home() {
             <Header></Header>
             <div className="content">
                 <BannerHome></BannerHome>
-                <Planos></Planos>
+                <ListaPlanos></ListaPlanos>
                 <CallToActionSection></CallToActionSection>
+                <ListaCategorias></ListaCategorias>
+                <CallToActionFornecedorSection></CallToActionFornecedorSection>
             </div>
             <Footer></Footer>
         </div>

@@ -11,12 +11,14 @@
         .clubinho{
             $w: 120px;
             position: absolute;
-            top: -50px;
-            right: 0px;
+            top: -69px;
+            right: 3px;
             width: $w;
             height: $w;
+            animation: upDown 1s ease infinite;
             img{
                 width: 100%;
+                filter: drop-shadow(1px 4px 2px rgba(0,0,0,0.2));
             }
         }
         &.emphasis{
@@ -40,5 +42,17 @@
             font-size: 35px;
             margin-bottom: 15px;
         }
+    }
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    50% {
+        transform: translateX(0px);
     }
 }

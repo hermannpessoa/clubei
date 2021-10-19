@@ -5,12 +5,14 @@
     max-width: 190px;
     display: block;
 }
-header{
-    background-color: #fafafa;
+.header{
+    background-color: #fafafaa8;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 50;
+    backdrop-filter: blur(2px);
     .container{
         display: flex;
         align-items: center;
