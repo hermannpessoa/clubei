@@ -15,6 +15,9 @@ function Card(item) {
                 emphasis: card.emphasis
             })}>
                 {card.emphasis && 
+                    <div className="shadowContainer">{/*shadow*/}</div>
+                }
+                {card.emphasis && 
                     <div className="clubinho">
                         <img src={clubinho} alt="Clubinho" />
                     </div>

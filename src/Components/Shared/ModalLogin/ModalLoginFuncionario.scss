@@ -11,4 +11,15 @@
             padding: 30px;
         }
     }
+
+    .loading-button{
+        width: 100px;
+        height: 30px;
+        display: inline-block;
+        background-image: url('../../../Assets/imgs/Loading.svg');
+        background-position: center;
+        background-size: 70px;
+        background-repeat: no-repeat;
+        
+    }
 }

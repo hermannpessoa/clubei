@@ -14,3 +14,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.swiper-wrapper {
+  z-index:3;
+}
+.swiper-pagination {
+  z-index:2;
+}
+.swiper-button-next, .swiper-button-prev {
+  z-index:4;
+}

@@ -6,20 +6,31 @@ import { Container, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import ModalLoginFuncionario from '../ModalLogin/ModalLoginFuncionario'
+import useWindowDimensions from '../../../Assets/Helpers/WindowDimmensios'
 
 function Header() {
         const [modalShow, setModalShow] = useState(false);
+
+        const {width} = useWindowDimensions();
 
         const [user, setUser] = useState(null);
 
         const getUser = async () => {
             const usuarioLogado = JSON.parse(localStorage.getItem('user'));
+            if(width < 800 && usuarioLogado){
+                usuarioLogado.nome = usuarioLogado.nome.split(' ')[0];
+            }
             setUser(usuarioLogado ? usuarioLogado : null)
          }
 
         useEffect(() => {
-            getUser()
+            getUser();
         }, [])
+
+        useEffect(() => {
+            getUser()
+        },[width])
+
         
         const handleShow = () => {
             setModalShow(!modalShow)

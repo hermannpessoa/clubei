@@ -49,6 +49,7 @@ const ListaPlanos = () => {
         setPlanos(json);
       }
       return getPlanos();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
     return (
@@ -65,8 +66,6 @@ const ListaPlanos = () => {
                         slidesPerView={slidesPerView()}
                         breackpoints={breakpoints}
                         initialSlide={width < 600 ? 1 : 0}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
                         >
                             {planos.map((item,i) => 
                                 <SwiperSlide key={i}>

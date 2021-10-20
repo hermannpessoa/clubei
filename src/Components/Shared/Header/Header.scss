@@ -32,6 +32,15 @@
                         li{
                             list-style: none;
                             margin: 10px;
+                            button{
+                                span{
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: block;
+                                    max-width: 300px;
+                                }
+                            }
                         }
                     }
                 }

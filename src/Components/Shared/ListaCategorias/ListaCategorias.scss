@@ -1,4 +1,39 @@
+@import '../../../Styles/Main.scss';
+
 .ListaCategorias{
+    position: relative;
+    .btn-swiper{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+        padding: 5px 5px;
+        background-color: #FFF;
+        transition: all .1s ease-in-out;
+        &:hover{
+            cursor: pointer;
+            background-color: $vermelho;
+            color: $branco;
+            border-radius: 100px !important;
+            padding: 35px;
+        }
+        &.btn-prev-slider{
+            left: 0; 
+            border-radius: 0px 20px 20px 0px;
+            &:hover{
+                left: -45px; 
+                // padding-left: 0;
+            }
+        }
+        &.btn-next-slider{
+            right: 0; 
+            border-radius: 20px 0px 0px 20px;
+            &:hover{
+                right: -45px; 
+                // padding-right: 0;
+            }
+        }
+    }
     .swiper-wrapper{
         align-items: center;
     }

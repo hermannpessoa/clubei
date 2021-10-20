@@ -2,7 +2,7 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import logoFooter from '../../../Assets/imgs/Rectangle 39.png'
-import { Facebook, Instagram, Linkedin, Copyright } from 'react-feather'
+import { Facebook, Instagram, Linkedin } from 'react-feather'
 import './Footer.scss'
 
 function Footer() {

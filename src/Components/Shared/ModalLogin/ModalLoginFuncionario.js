@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { Modal, Button, Row, Col, Form } from "react-bootstrap";
+import loading from '../../../Assets/imgs/Loading.svg'
 import "./ModalLoginFuncionario.scss";
 
 function ModalLoginFuncionario(props) {
@@ -18,6 +19,7 @@ function ModalLoginFuncionario(props) {
     }, [])
 
     const logout = () => {
+        setLoading(true)
         localStorage.removeItem('user');
 
         setTimeout(() => {
@@ -42,7 +44,7 @@ function ModalLoginFuncionario(props) {
         setTimeout(() => {
             props.onHide();
             setLoading(false)
-        } ,2000);
+        } ,1000);
     }
 
     const verifyUser = () =>{
@@ -70,7 +72,7 @@ function ModalLoginFuncionario(props) {
                 <Row className="mb-4">
                     <Col className="text-center">
                         {!loading && <Button variant="primary --text-branco" onClick={logout}>Sair</Button>}
-                        {loading && <Button variant="primary --text-branco" disabled>saindo...</Button>}
+                        {loading && <div className="loading-button"></div>}
                     </Col>
                 </Row>
             </Modal.Body>
@@ -101,7 +103,7 @@ function ModalLoginFuncionario(props) {
                 <Row className="mb-4">
                     <Col className="text-center">
                         {!loading && <Button variant="danger --text-branco" onClick={login}>Entrar</Button>}
-                        {loading && <Button variant="danger --text-branco" disabled>Enviando...</Button>}
+                        {loading && <div className="loading-button"></div>}
                     </Col>
                 </Row>
                 <Row>

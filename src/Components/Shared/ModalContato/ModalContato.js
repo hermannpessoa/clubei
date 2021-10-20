@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from "react";
-import { Modal, Button, Row, Col, Form } from "react-bootstrap";
+import React from "react";
+import { Modal, Row, Col} from "react-bootstrap";
 import "./ModalContato.scss";
 
 function ModalContato(props) {

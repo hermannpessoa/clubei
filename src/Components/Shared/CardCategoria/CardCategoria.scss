@@ -30,8 +30,15 @@
         }
     }
     .colorCard-image{
+        position: relative;
         img{
+            display: flex;
             width: 100%;
+            aspect-ratio: 19/12;
+            background-image: url('../../../Assets/imgs/Loading.svg');
+            background-position: center;
+            background-size: 70px;
+            background-repeat: no-repeat;
         }
     }
     .colorCard-name{

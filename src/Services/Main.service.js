@@ -29,24 +29,26 @@ const apiFecthGet = async (endpoint) => {
     return res;
 }
 
-const Api = {
-    getPlanos: async () => {
-        return apiFecthGet('/planos');
-    },
-    getCategorias: async () => {
-        return apiFecthGet('/categorias');
-    },
-    getImageFromWeb: async (keyword) => {
-        const url = `https://source.unsplash.com/300x200/?${keyword}`;
-    
-        const res = await fetch(url).then(res => {
-            return res.url
-        }).catch(err => {
-            console.error(err)
-        })
+function Api() {
+    return {
+        getPlanos: async () => {
+            return apiFecthGet('/planos');
+        },
+        getCategorias: async () => {
+            return apiFecthGet('/categorias');
+        },
+        getImageFromWeb: async (keyword) => {
+            const url = `https://source.unsplash.com/300x200/?${keyword}`;
+        
+            const res = await fetch(url).then(res => {
+                return res.url
+            }).catch(err => {
+                console.error(err)
+            })
 
-        return res
+            return res
+        }
     }
 }
 
-export default () => Api;
+export default Api;

@@ -14,11 +14,11 @@ function CardCategoria(prop) {
     useEffect(() => {
         const getThumb = async () => {
             let response = await api.getImageFromWeb(card.keywords);
-            console.log('image', response)
             setThumb(response)
         }
         
-        getThumb()
+        getThumb();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
