@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row } from 'react-bootstrap'
 import Header from '../Shared/Header/Header';
+import Footer from '../Shared/Footer/Footer';
 import ListaPlanos from './../Shared/ListaPlanos/ListaPlanos';
 
 
@@ -17,6 +18,7 @@ function Planos() {
                 </Row>
             </Container>
             </div>
+            <Footer></Footer>
         </>
     )
 }

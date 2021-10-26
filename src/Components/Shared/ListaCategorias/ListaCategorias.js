@@ -59,14 +59,13 @@ function ListaCategorias() {
 
     return (
         <div>
-            <Container>
-                <div>
+            <Container className="containerPlanos">
+                <div className="mx-3">
                     <Link to="/categorias"><h2 className="title --text-danger mb-4">Uma amostra do que você encontra aqui...</h2></Link>
                 </div>
                 <div className="ListaCategorias">
                     <Swiper
                         slidesPerView={slidesPerView()}
-                        spaceBetween={25}
                         navigation={{
                             prevEl: prevRef.current, // Assert non-null
                             nextEl: nextRef.current, // Assert non-null

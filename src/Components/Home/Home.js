@@ -9,7 +9,8 @@ import ListaPlanos from '../Shared/ListaPlanos/ListaPlanos'
 
 function Home() {
     return (
-        <div>
+        <>
+        <div className="masterContent">
             <Header></Header>
             <div className="content">
                 <BannerHome></BannerHome>
@@ -20,6 +21,7 @@ function Home() {
             </div>
             <Footer></Footer>
         </div>
+        </>
     )
 }
 

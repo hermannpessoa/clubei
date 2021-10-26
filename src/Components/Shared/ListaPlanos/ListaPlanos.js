@@ -22,14 +22,16 @@ const ListaPlanos = () => {
         400: {
           slidesPerView: 1,
           spaceBetween: 10,
+          centeredSlides: false,
+        loop: true,
         },
         800: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 20,
           },
         1024: {
           slidesPerView: 3,
-          spaceBetween: 10
+          spaceBetween: 20
         }
       }
 
@@ -54,17 +56,19 @@ const ListaPlanos = () => {
     
     return (
         <>
-            <Container>
+            <Container className="containerPlanos">
                 <Row>
-                <div className="col-12">
-                    <Link to="/planos"><h2 className="title">Nossos Planos</h2></Link>
-                </div>
+                    <div className="col-12 mx-3">
+                        <Link to="/planos"><h2 className="title">Nossos Planos</h2></Link>
+                    </div>
                 </Row>
                 <Row>
-                <div className="plans col-12">
+                <div className={width > 500 ? 'plans col-12' : 'mob plans col-12'}>
                     <Swiper
                         slidesPerView={slidesPerView()}
                         breackpoints={breakpoints}
+                        // centeredSlides={width < 600}
+                        // loop={width < 600}
                         initialSlide={width < 600 ? 1 : 0}
                         >
                             {planos.map((item,i) => 

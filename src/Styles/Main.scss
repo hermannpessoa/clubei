@@ -2,56 +2,119 @@
     padding: 0;
     margin: 0;
 }
-a{
+a {
     text-decoration: none;
     color: initial;
 }
-body{
-    font-family: 'Poppins', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+body,
+html {
+    font-family: "Poppins", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-.overflow-x-hidden{
+#root {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    .footer {
+        margin-top: auto;
+    }
+}
+
+.btn {
+    outline: none !important;
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+
+.overflow-x-hidden {
     overflow-x: hidden !important;
 }
 
+.masterContent {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.containerPlanos {
+    display: block;
+    width: 100%;
+    // overflow: hidden;
+    @media (max-width: 800px) {
+        padding: 0;
+        margin: 0;
+    }
+}
 
-$azulEscuro: #1C1B3D;
-$azulClaro: #4885C4;
-$verde: #3FB072;
-$amarelo: #E6BF22;
-$laranja: #DE7E31;
-$vermelho: #DD4949;
-$cinza: #BEBEBC;
-$cinzaClaro: #DBDBDB;
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    // outline: 1px solid slategrey;
+}
+
+
+.content {
+    margin-top: 89px;
+}
+
+.title {
+    font-family: "Poppins";
+    font-size: 35px;
+    font-weight: 400;
+}
+
+@media (max-width: 800px) {
+    .title {
+        font-size: 28px;
+    }
+}
+
+$azulEscuro: #1c1b3d;
+$azulClaro: #4885c4;
+$verde: #3fb072;
+$amarelo: #e6bf22;
+$laranja: #de7e31;
+$vermelho: #dd4949;
+$cinza: #bebebc;
+$cinzaClaro: #dbdbdb;
 $branco: #fff;
 
 $theme-colors: (
-  "primary":    $azulEscuro,
-  "secondary":  $azulClaro,
-  "success":    $verde,
-  "info":       $amarelo,
-  "warning":    $amarelo,
-  "danger":     $vermelho,
-  "light":      $cinzaClaro,
-  "dark":       $cinza,
-  "superlight": $branco,
-  "azulEscuro": $azulEscuro,
-  "azulClaro":  $azulClaro,
-  "verde":      $verde,
-  "laranja":    $laranja,
-  "amarelo":    $amarelo,
-  "vermelho":   $vermelho,
-  "cinzaClaro": $cinzaClaro,
-  "cinza":      $cinza,
-  "branco":     $branco
+    "primary": $azulEscuro,
+    "secondary": $azulClaro,
+    "success": $verde,
+    "info": $amarelo,
+    "warning": $amarelo,
+    "danger": $vermelho,
+    "light": $cinzaClaro,
+    "dark": $cinza,
+    "superlight": $branco,
+    "azulEscuro": $azulEscuro,
+    "azulClaro": $azulClaro,
+    "verde": $verde,
+    "laranja": $laranja,
+    "amarelo": $amarelo,
+    "vermelho": $vermelho,
+    "cinzaClaro": $cinzaClaro,
+    "cinza": $cinza,
+    "branco": $branco,
 ) !default;
 
 @each $color, $value in $theme-colors {
-
-    .--text-#{$color}{
+    .--text-#{$color} {
         color: $value !important;
     }
-    .--bg-#{$color}{
+    .--bg-#{$color} {
         background-color: $value !important;
     }
 
@@ -60,20 +123,20 @@ $theme-colors: (
     }
 
     .btn {
-        transition: all .15s ease;
+        transition: all 0.15s ease;
         &.btn-#{$color} {
             background: $value;
             border-color: $value;
             color: $branco;
-            
-            &:hover{
+
+            &:hover {
                 background-color: lighten($value, 25%);
                 border-color: lighten($value, 25%);
-                &.outline{
+                &.outline {
                     background: $cinzaClaro;
                 }
             }
-            &.outline{
+            &.outline {
                 border-color: $value;
                 background: transparent;
                 color: $value;
@@ -82,19 +145,22 @@ $theme-colors: (
     }
 }
 
-.content{
-    margin-top: 89px;
-}
 
-.title{
-    font-family: 'Poppins';
-    font-size: 35px;
-    font-weight: 400;
-}
-
-@media (max-width: 800px){
-    .title{
-        font-size: 28px;
+@mixin upDown ($t, $offset) {
+    
+    animation: updown#{$offset} $t ease infinite;
+    
+    @keyframes  updown#{$offset} {
+        0% {
+            transform: translateY(-$offset);
+        }
+        50% {
+            transform: translateY($offset);
+        }
+        100% {
+            transform: translateY(-$offset);
+        }
     }
 }
+
 
